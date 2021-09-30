@@ -60,30 +60,30 @@ public class ControleDados {
 	// a posicao 0 do vetor dadosFuncs indica aonde os dados devem ser inseridos
 	public boolean inserirEditarFuncs(String[] dadosFuncs) {
 
-		if (!dadosFuncs[3].matches("[0-9]+") || !dadosFuncs[4].matches("[0-9]+") || !dadosFuncs[5].matches("[0-9]+")
-				|| !dadosFuncs[6].matches("[0-9]+")) {
-			return false;
-		} else {
-			Funcionario func = new Funcionario(dadosFuncs[1], dadosFuncs[2], dadosFuncs[3], dadosFuncs[4],
-					new Telefone(Integer.parseInt(dadosFuncs[5]), Integer.parseInt(dadosFuncs[6])),
-					new Endereco(Integer.parseInt(dadosFuncs[7]), dadosFuncs[8]));
-			d.inserirEditarFuncs(func, Integer.parseInt(dadosFuncs[0]));
-			return true;
-		}
+//		if (!dadosFuncs[3].matches("[0-9]+") || !dadosFuncs[4].matches("[0-9]+") || !dadosFuncs[5].matches("[0-9]+")
+//				|| !dadosFuncs[6].matches("[0-9]+")) {
+//			return false;
+//		} else {
+		Funcionario func = new Funcionario(dadosFuncs[1], dadosFuncs[2], dadosFuncs[3], dadosFuncs[4],
+				new Telefone(Integer.parseInt(dadosFuncs[5]), Integer.parseInt(dadosFuncs[6])),
+				new Endereco(Integer.parseInt(dadosFuncs[7]), dadosFuncs[8]));
+		d.inserirEditarFuncs(func, Integer.parseInt(dadosFuncs[0]));
+		return true;
 	}
+	// }
 
 	// a posicao 0 do vetor dadosClientes indica aonde os dados devem ser inseridos
 	public boolean inserirEditarClientes(String[] dadosClientes) {
-		if (!dadosClientes[3].matches("[0-9]+") || !dadosClientes[4].matches("[0-9]+")
-				|| !dadosClientes[5].matches("[0-9]+") || !dadosClientes[6].matches("[0-9]+")) {
-			return false;
-		} else {
-			Cliente cli = new Cliente(dadosClientes[1], dadosClientes[2], dadosClientes[3], dadosClientes[4],
-					new Telefone(Integer.parseInt(dadosClientes[5]), Integer.parseInt(dadosClientes[6])),
-					new Endereco(Integer.parseInt(dadosClientes[7]), dadosClientes[8]));
-			d.inserirEditarClientes(cli, Integer.parseInt(dadosClientes[0]));
-			return true;
-		}
+//		if (!dadosClientes[3].matches("[0-9]+") || !dadosClientes[4].matches("[0-9]+")
+//				|| !dadosClientes[5].matches("[0-9]+") || !dadosClientes[6].matches("[0-9]+")) {
+//			return false;
+//		} else {
+		Cliente cli = new Cliente(dadosClientes[1], dadosClientes[2], dadosClientes[3], dadosClientes[4],
+				new Telefone(Integer.parseInt(dadosClientes[5]), Integer.parseInt(dadosClientes[6])),
+				new Endereco(Integer.parseInt(dadosClientes[7]), dadosClientes[8]));
+		d.inserirEditarClientes(cli, Integer.parseInt(dadosClientes[0]));
+		return true;
+		// }
 	}
 
 	// a posicao 0 do vetor dadosOculos indica aonde os dados devem ser inseridos

@@ -18,12 +18,14 @@ public class TelaDetalhePessoa implements ActionListener {
 	private JTextField valorNome;
 	private JLabel labelSalario = new JLabel("Salário: ");
 	private JTextField valorSalario;
-	private JLabel labelEnd = new JLabel("Endereco: ");
-	private JTextField valorEnd;
+	private JLabel labelEmail = new JLabel("Email: ");
+	private JTextField valorEmail;
 	private JLabel labelCPF = new JLabel("CPF: ");
 	private JTextField valorCPF;
 	private JLabel labelID = new JLabel("Numero da Identidade: ");
 	private JTextField valorID;
+	private JLabel labelCargo = new JLabel("Cargo: ");
+	private JTextField valorCargo;
 	private JLabel labelTelefone = new JLabel("Telefone: ");
 	private JTextField valorDdd;
 	private JTextField valorTelefone;
@@ -58,8 +60,9 @@ public class TelaDetalhePessoa implements ActionListener {
 
 		if (op == 3) { // Preenche dados com dados do cliente clicado
 			valorNome = new JTextField(dados.getClientes()[pos].getNome(), 200);
-			valorEnd = new JTextField(dados.getClientes()[pos].getResidencia(), 200);
+			valorEmail = new JTextField(dados.getClientes()[pos].getEmail(), 200);
 			valorSalario = new JTextField(200);
+			valorCargo = new JTextField(200);
 			valorCPF = new JTextField(String.valueOf(dados.getClientes()[pos].getCpf()), 200);
 			valorID = new JTextField(String.valueOf(dados.getClientes()[pos].getNumID()), 200);
 			valorDdd = new JTextField(String.valueOf(dados.getClientes()[pos].getNumTel().getDdd()), 3);
@@ -71,9 +74,10 @@ public class TelaDetalhePessoa implements ActionListener {
 
 			valorNome = new JTextField(dados.getFuncionarios()[pos].getNome(), 200);
 			valorSalario = new JTextField(String.valueOf(dados.getFuncionarios()[pos].getSalario()), 200);
-			valorEnd = new JTextField(200);
+			valorEmail = new JTextField(200);
 			valorCPF = new JTextField(String.valueOf(dados.getFuncionarios()[pos].getCpf()), 200);
-			valorID = new JTextField(String.valueOf(dados.getFuncionarios()[pos].getNumID()), 200);
+			valorID = new JTextField(200);
+			valorCargo = new JTextField(dados.getFuncionarios()[pos].getCargo(), 200);
 			valorDdd = new JTextField(String.valueOf(dados.getFuncionarios()[pos].getNumTel().getDdd()), 3);
 			valorTelefone = new JTextField(String.valueOf(dados.getFuncionarios()[pos].getNumTel().getNumero()), 10);
 			valorCep = new JTextField(String.valueOf(dados.getFuncionarios()[pos].getEndereco().getCep()), 10);
@@ -82,7 +86,7 @@ public class TelaDetalhePessoa implements ActionListener {
 		} else { // Não preenche com dados
 
 			valorNome = new JTextField(200);
-			valorEnd = new JTextField(200);
+			valorEmail = new JTextField(200);
 			valorSalario = new JTextField(200);
 			valorCPF = new JTextField(200);
 			valorID = new JTextField(200);
@@ -90,20 +94,23 @@ public class TelaDetalhePessoa implements ActionListener {
 			valorTelefone = new JTextField(10);
 			valorCep = new JTextField(10);
 			valorComp = new JTextField(200);
+			valorCargo = new JTextField(200);
 
 			botaoSalvar.setBounds(245, 240, 115, 30);
 		}
 
 		labelNome.setBounds(30, 20, 150, 25);
 		valorNome.setBounds(180, 20, 180, 25);
-		labelEnd.setBounds(30, 50, 150, 25);
-		valorEnd.setBounds(180, 50, 180, 25);
+		labelEmail.setBounds(30, 50, 150, 25);
+		valorEmail.setBounds(180, 50, 180, 25);
 		labelSalario.setBounds(30, 50, 180, 25);
 		valorSalario.setBounds(180, 50, 180, 25);
 		labelCPF.setBounds(30, 80, 150, 25);
 		valorCPF.setBounds(180, 80, 180, 25);
 		labelID.setBounds(30, 110, 150, 25);
 		valorID.setBounds(180, 110, 180, 25);
+		labelCargo.setBounds(30, 110, 150, 25);
+		valorCargo.setBounds(180, 110, 180, 25);
 		labelTelefone.setBounds(30, 140, 150, 25);
 		valorDdd.setBounds(180, 140, 28, 25);
 		valorTelefone.setBounds(210, 140, 65, 25);
@@ -114,9 +121,10 @@ public class TelaDetalhePessoa implements ActionListener {
 
 		// Coloca os campos relacionados a endereço de aluno
 		if (op == 1 || op == 3) {
-			this.janela.add(labelEnd);
-			this.janela.add(valorEnd);
-
+			this.janela.add(labelEmail);
+			this.janela.add(valorEmail);
+			this.janela.add(labelID);
+			this.janela.add(valorID);
 		}
 
 		// Coloca campos relacionados a salário de professor
@@ -124,6 +132,8 @@ public class TelaDetalhePessoa implements ActionListener {
 
 			this.janela.add(labelSalario);
 			this.janela.add(valorSalario);
+			this.janela.add(labelCargo);
+			this.janela.add(valorCargo);
 		}
 
 		// Coloca botões de excluir e salvar
@@ -137,8 +147,6 @@ public class TelaDetalhePessoa implements ActionListener {
 		this.janela.add(valorNome);
 		this.janela.add(labelCPF);
 		this.janela.add(valorCPF);
-		this.janela.add(labelID);
-		this.janela.add(valorID);
 		this.janela.add(labelTelefone);
 		this.janela.add(valorDdd);
 		this.janela.add(valorTelefone);
@@ -172,17 +180,21 @@ public class TelaDetalhePessoa implements ActionListener {
 
 				novoDado[1] = valorNome.getText();
 				novoDado[3] = valorCPF.getText();
-				novoDado[4] = valorID.getText();
+//				novoDado[4] = valorID.getText();
 				novoDado[5] = valorDdd.getText();
 				novoDado[6] = valorTelefone.getText();
 				novoDado[7] = valorCep.getText();
 				novoDado[8] = valorComp.getText();
 
 				if (opcao == 1 || opcao == 3) {
-					novoDado[2] = valorEnd.getText();
+					novoDado[2] = valorEmail.getText();
+					res = dados.inserirEditarClientes(novoDado);
+					novoDado[4] = valorID.getText();
 					res = dados.inserirEditarClientes(novoDado);
 				} else {
 					novoDado[2] = valorSalario.getText();
+					res = dados.inserirEditarFuncs(novoDado);
+					novoDado[4] = valorCargo.getText();
 					res = dados.inserirEditarFuncs(novoDado);
 				}
 

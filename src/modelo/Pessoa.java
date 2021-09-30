@@ -2,7 +2,6 @@ package modelo;
 
 public abstract class Pessoa {
 
-	protected String residencia;
 	protected Endereco endereco;
 	protected Telefone numTel;
 	protected String nome;
@@ -10,13 +9,6 @@ public abstract class Pessoa {
 	protected String cpf;
 
 //gets e sets
-	public String getResidencia() {
-		return residencia;
-	}
-
-	public void setResidencia(String residencia) {
-		this.residencia = residencia;
-	}
 
 	public Endereco getEndereco() {
 		return endereco;

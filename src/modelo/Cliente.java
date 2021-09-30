@@ -11,17 +11,17 @@ public class Cliente extends Pessoa {
 		this.numID = id;
 		this.cpf = registro;
 		this.numTel = tel;
-		this.residencia = end;
+//		this.residencia = end;
 
 	}
 
 	// adddffa//
-	public Cliente(String nome, String end, String registro, String id, Telefone tel, Endereco ende) {
+	public Cliente(String nome, String email, String registro, String id, Telefone tel, Endereco ende) {
 		this.nome = nome;
 		this.numID = id;
 		this.cpf = registro;
 		this.numTel = tel;
-		this.residencia = end;
+		this.email = email;
 		this.endereco = ende;
 
 	}
@@ -31,7 +31,7 @@ public class Cliente extends Pessoa {
 		this.cpf = registro;
 		this.numTel = tel;
 		this.email = email;
-		this.residencia = end;
+//		this.residencia = end;
 	}
 
 	public Cliente(String nome, String registro, Telefone tel, String email, Endereco end) {

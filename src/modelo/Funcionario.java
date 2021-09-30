@@ -2,9 +2,7 @@ package modelo;
 
 public class Funcionario extends Pessoa {
 
-	// private Date dataNasc;
 	private String matricula;
-	// private Date dataIngresso;
 	private String salario;
 	private String cargo;
 
@@ -28,11 +26,11 @@ public class Funcionario extends Pessoa {
 
 	}
 
-	public Funcionario(String nome, String salario, String cpf, String numId, Telefone tel, Endereco end) {
+	public Funcionario(String nome, String salario, String cpf, String cargo, Telefone tel, Endereco end) {
 		this.nome = nome;
 		this.salario = salario;
 		this.cpf = cpf;
-		this.numID = numId;
+		this.cargo = cargo;
 		this.numTel = tel;
 		this.endereco = end;
 

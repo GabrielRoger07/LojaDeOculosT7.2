@@ -52,8 +52,8 @@ public class ControleCliente {
 		this.qtdClientes = qtdClientes;
 	}
 
-	public String getResidencia(int i) {
-		return cli[i].getResidencia();
+	public String getEmail(int i) {
+		return cli[i].getEmail();
 	}
 
 }

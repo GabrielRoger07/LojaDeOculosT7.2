@@ -43,6 +43,10 @@ public class ControleFuncionario {
 		return numID;
 	}
 
+	public String getCargo(int i) {
+		return func[i].getCargo();
+	}
+
 	public Telefone getNumTel(int i) {
 		return func[i].getNumTel();
 	}
