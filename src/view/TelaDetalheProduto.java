@@ -115,7 +115,13 @@ public class TelaDetalheProduto implements ActionListener {
 			valorCorArm = new JTextField(200);
 			valorCorLen = new JTextField(200);
 
-			botaoSalvar.setBounds(245, 265, 115, 30);
+			if (op == 1 || op == 3) {
+				botaoSalvar.setBounds(245, 270, 115, 30);
+			} else if (op == 2 || op == 4) {
+				botaoSalvar.setBounds(245, 210, 115, 30);
+			} else {
+				botaoSalvar.setBounds(245, 240, 115, 30);
+			}
 		}
 
 		labelMarca.setBounds(30, 20, 150, 25);
@@ -171,9 +177,19 @@ public class TelaDetalheProduto implements ActionListener {
 		}
 
 		// Coloca botoes de excluir e salvar
-		if (op == 3 || op == 4 || op == 6) {
-			botaoSalvar.setBounds(120, 265, 115, 30);
-			botaoExcluir.setBounds(245, 265, 115, 30);
+		if (op == 3) {
+			botaoSalvar.setBounds(120, 270, 115, 30);
+			botaoExcluir.setBounds(245, 270, 115, 30);
+			this.janela.add(botaoExcluir);
+		}
+		if (op == 4) {
+			botaoSalvar.setBounds(120, 210, 115, 30);
+			botaoExcluir.setBounds(245, 210, 115, 30);
+			this.janela.add(botaoExcluir);
+		}
+		if (op == 6) {
+			botaoSalvar.setBounds(120, 240, 115, 30);
+			botaoExcluir.setBounds(245, 240, 115, 30);
 			this.janela.add(botaoExcluir);
 		}
 
@@ -189,7 +205,13 @@ public class TelaDetalheProduto implements ActionListener {
 
 		this.janela.setLayout(null);
 
-		this.janela.setSize(400, 360);
+		if (op == 1 || op == 3) {
+			this.janela.setSize(400, 360);
+		} else if (op == 2 || op == 4) {
+			this.janela.setSize(400, 300);
+		} else {
+			this.janela.setSize(400, 330);
+		}
 		this.janela.setVisible(true);
 
 		botaoSalvar.addActionListener(this);

@@ -72,11 +72,11 @@ public class Dados {
 		lentes[2] = new Lente("Essilor", 20003, 61.99f, 1.8f, "Miopia", 1);
 		lentes[3] = new Lente("Kodak Lenses", 20004, 44.99f, 2.0f, "Hipermetropia", 4);
 		lentes[4] = new Lente("Lenscope", 20005, 59.99f, 2.2f, "Miopia", 3);
-		oculos[0] = new OculosDeSol("Ray-Ban", 30001, 499.99f, "Quadrado", "Metal", 10);
-		oculos[1] = new OculosDeSol("Chilli Beans", 30002, 259.99f, "Aviador", "Metal", 11);
-		oculos[2] = new OculosDeSol("Ray-Ban", 30003, 499.99f, "Quadrado", "Metal", 15);
-		oculos[3] = new OculosDeSol("Ray-Ban", 30004, 499.99f, "Quadrado", "Metal", 8);
-		oculos[4] = new OculosDeSol("Chilli Beans", 30005, 179.99f, "Quadrado", "Plástico", 18);
+		oculos[0] = new OculosDeSol("Ray-Ban", 30001, 499.99f, "Quadrado", "Metal", "Marrom", "Verde", 10);
+		oculos[1] = new OculosDeSol("Chilli Beans", 30002, 259.99f, "Aviador", "Metal", "Pastel", "Marrom", 11);
+		oculos[2] = new OculosDeSol("Ray-Ban", 30003, 499.99f, "Quadrado", "Metal", "Vinho", "Cinza", 15);
+		oculos[3] = new OculosDeSol("Ray-Ban", 30004, 499.99f, "Quadrado", "Metal", "Dourado", "Amarelo", 8);
+		oculos[4] = new OculosDeSol("Chilli Beans", 30005, 179.99f, "Quadrado", "Plástico", "Preto", "Preto", 18);
 
 		qtdClientes = 5;
 		qtdFuncs = 5;
