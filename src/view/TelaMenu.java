@@ -25,12 +25,12 @@ public class TelaMenu implements ActionListener {
 	public TelaMenu() {
 		titulo.setFont(new Font("Arial", Font.BOLD, 20));
 		titulo.setBounds(120, 10, 150, 30);
-		cliente.setBounds(130, 100, 120, 30);
-		funcionario.setBounds(130, 150, 120, 30);
-		venda.setBounds(130, 50, 120, 30);
-		oculosSol.setBounds(130, 200, 120, 30);
-		lente.setBounds(130, 250, 120, 30);
-		armacao.setBounds(130, 300, 120, 30);
+		cliente.setBounds(130, 50, 120, 30);
+		funcionario.setBounds(130, 100, 120, 30);
+		venda.setBounds(130, 300, 120, 30);
+		oculosSol.setBounds(130, 250, 120, 30);
+		lente.setBounds(130, 200, 120, 30);
+		armacao.setBounds(130, 150, 120, 30);
 
 		janela.setLayout(null);
 
