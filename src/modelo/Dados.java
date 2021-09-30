@@ -10,8 +10,8 @@ public class Dados {
 	private int qtdArmacoes = 0;
 	private Telefone[] tels = new Telefone[40];
 	private int qtdTels = 0;
-//	private Endereco[] enderecos = new Endereco[40];
-//	private int qtdEnderecos = 0;
+	private Endereco[] enderecos = new Endereco[40];
+	private int qtdEnderecos = 0;
 	private Lente[] lentes = new Lente[40];
 	private int qtdLentes = 0;
 	private OculosDeSol[] oculos = new OculosDeSol[40];
@@ -52,16 +52,21 @@ public class Dados {
 		tels[2] = new Telefone(61, 83521478);
 		tels[3] = new Telefone(11, 87894519);
 		tels[4] = new Telefone(14, 90817423);
-		clientes[0] = new Cliente("Gabriel", "Vicente Pires", "05214536985", "3147395", tels[0]);
-		clientes[1] = new Cliente("João", "Águas Claras", "03475695123", "2985743", tels[1]);
-		clientes[2] = new Cliente("Henrique", "Gama", "04685020071", "2589674", tels[2]);
-		clientes[3] = new Cliente("Juliana", "Asa Sul", "06845062510", "3745896", tels[3]);
-		clientes[4] = new Cliente("Maria", "Ceilândia", "02854637125", "3257842", tels[4]);
-		funcs[0] = new Funcionario("Sandra", "1050.00", "07842695812", "2985713", tels[0]);
-		funcs[1] = new Funcionario("Genildo", "1500.00", "05628914560", "3946657", tels[1]);
-		funcs[2] = new Funcionario("Cadu", "1250.00", "05792486854", "3610610", tels[2]);
-		funcs[3] = new Funcionario("Fernanda", "1300.00", "06546844132", "2613489", tels[3]);
-		funcs[4] = new Funcionario("Edna", "1450.00", "07649080498", "2968108", tels[4]);
+		enderecos[0] = new Endereco(1213, "aa");
+		enderecos[1] = new Endereco(4785, "bb");
+		enderecos[2] = new Endereco(5896, "cc");
+		enderecos[3] = new Endereco(7484, "dd");
+		enderecos[4] = new Endereco(1545, "ee");
+		clientes[0] = new Cliente("Gabriel", "Vicente Pires", "05214536985", "3147395", tels[0], enderecos[0]);
+		clientes[1] = new Cliente("João", "Águas Claras", "03475695123", "2985743", tels[1], enderecos[1]);
+		clientes[2] = new Cliente("Henrique", "Gama", "04685020071", "2589674", tels[2], enderecos[2]);
+		clientes[3] = new Cliente("Juliana", "Asa Sul", "06845062510", "3745896", tels[3], enderecos[3]);
+		clientes[4] = new Cliente("Maria", "Ceilândia", "02854637125", "3257842", tels[4], enderecos[4]);
+		funcs[0] = new Funcionario("Sandra", "1050.00", "07842695812", "2985713", tels[0], enderecos[0]);
+		funcs[1] = new Funcionario("Genildo", "1500.00", "05628914560", "3946657", tels[1], enderecos[1]);
+		funcs[2] = new Funcionario("Cadu", "1250.00", "05792486854", "3610610", tels[2], enderecos[2]);
+		funcs[3] = new Funcionario("Fernanda", "1300.00", "06546844132", "2613489", tels[3], enderecos[3]);
+		funcs[4] = new Funcionario("Edna", "1450.00", "07649080498", "2968108", tels[4], enderecos[4]);
 		armacoes[0] = new Armacao("Chilli Beans", 10001, 53.99f, "Quadrado", "Madeira", "Marrom", 2);
 		armacoes[1] = new Armacao("Mormaii", 10002, 59.99f, "Retangular", "Plástico", "Pastel", 4);
 		armacoes[2] = new Armacao("Chilli Beans", 10003, 64.99f, "Redondo", "Alumínio", "Vinho", 3);
@@ -181,21 +186,21 @@ public class Dados {
 			qtdArmacoes++;
 	}
 
-//	public Endereco[] getEnderecos() {
-//		return enderecos;
-//	}
-//
-//	public void setEnderecos(Endereco[] enderecos) {
-//		this.enderecos = enderecos;
-//	}
-//
-//	public int getQtdEnderecos() {
-//		return qtdEnderecos;
-//	}
-//
-//	public void setQtdEnderecos(int qtdEnderecos) {
-//		this.qtdEnderecos = qtdEnderecos;
-//	}
+	public Endereco[] getEnderecos() {
+		return enderecos;
+	}
+
+	public void setEnderecos(Endereco[] enderecos) {
+		this.enderecos = enderecos;
+	}
+
+	public int getQtdEnderecos() {
+		return qtdEnderecos;
+	}
+
+	public void setQtdEnderecos(int qtdEnderecos) {
+		this.qtdEnderecos = qtdEnderecos;
+	}
 
 	public Lente[] getLentes() {
 		return lentes;

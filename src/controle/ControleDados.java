@@ -65,7 +65,8 @@ public class ControleDados {
 			return false;
 		} else {
 			Funcionario func = new Funcionario(dadosFuncs[1], dadosFuncs[2], dadosFuncs[3], dadosFuncs[4],
-					new Telefone(Integer.parseInt(dadosFuncs[5]), Integer.parseInt(dadosFuncs[6])));
+					new Telefone(Integer.parseInt(dadosFuncs[5]), Integer.parseInt(dadosFuncs[6])),
+					new Endereco(Integer.parseInt(dadosFuncs[7]), dadosFuncs[8]));
 			d.inserirEditarFuncs(func, Integer.parseInt(dadosFuncs[0]));
 			return true;
 		}
@@ -78,7 +79,8 @@ public class ControleDados {
 			return false;
 		} else {
 			Cliente cli = new Cliente(dadosClientes[1], dadosClientes[2], dadosClientes[3], dadosClientes[4],
-					new Telefone(Integer.parseInt(dadosClientes[5]), Integer.parseInt(dadosClientes[6])));
+					new Telefone(Integer.parseInt(dadosClientes[5]), Integer.parseInt(dadosClientes[6])),
+					new Endereco(Integer.parseInt(dadosClientes[7]), dadosClientes[8]));
 			d.inserirEditarClientes(cli, Integer.parseInt(dadosClientes[0]));
 			return true;
 		}

@@ -24,9 +24,13 @@ public class TelaDetalhePessoa implements ActionListener {
 	private JTextField valorCPF;
 	private JLabel labelID = new JLabel("Numero da Identidade: ");
 	private JTextField valorID;
-	private JLabel labelTelefone = new JLabel("Telefone");
+	private JLabel labelTelefone = new JLabel("Telefone: ");
 	private JTextField valorDdd;
 	private JTextField valorTelefone;
+	private JLabel labelCep = new JLabel("CEP: ");
+	private JLabel labelComp = new JLabel("Complemento: ");
+	private JTextField valorCep;
+	private JTextField valorComp;
 	private JButton botaoExcluir = new JButton("Excluir");
 	private JButton botaoSalvar = new JButton("Salvar");
 	private String[] novoDado = new String[9];
@@ -60,6 +64,8 @@ public class TelaDetalhePessoa implements ActionListener {
 			valorID = new JTextField(String.valueOf(dados.getClientes()[pos].getNumID()), 200);
 			valorDdd = new JTextField(String.valueOf(dados.getClientes()[pos].getNumTel().getDdd()), 3);
 			valorTelefone = new JTextField(String.valueOf(dados.getClientes()[pos].getNumTel().getNumero()), 10);
+			valorCep = new JTextField(String.valueOf(dados.getClientes()[pos].getEndereco().getCep()), 10);
+			valorComp = new JTextField(dados.getClientes()[pos].getEndereco().getComplemento(), 200);
 
 		} else if (op == 4) { // Preenche dados com dados do funcionário clicado
 
@@ -70,6 +76,8 @@ public class TelaDetalhePessoa implements ActionListener {
 			valorID = new JTextField(String.valueOf(dados.getFuncionarios()[pos].getNumID()), 200);
 			valorDdd = new JTextField(String.valueOf(dados.getFuncionarios()[pos].getNumTel().getDdd()), 3);
 			valorTelefone = new JTextField(String.valueOf(dados.getFuncionarios()[pos].getNumTel().getNumero()), 10);
+			valorCep = new JTextField(String.valueOf(dados.getFuncionarios()[pos].getEndereco().getCep()), 10);
+			valorComp = new JTextField(dados.getFuncionarios()[pos].getEndereco().getComplemento(), 200);
 
 		} else { // Não preenche com dados
 
@@ -80,8 +88,10 @@ public class TelaDetalhePessoa implements ActionListener {
 			valorID = new JTextField(200);
 			valorDdd = new JTextField(3);
 			valorTelefone = new JTextField(10);
+			valorCep = new JTextField(10);
+			valorComp = new JTextField(200);
 
-			botaoSalvar.setBounds(245, 175, 115, 30);
+			botaoSalvar.setBounds(245, 240, 115, 30);
 		}
 
 		labelNome.setBounds(30, 20, 150, 25);
@@ -97,6 +107,10 @@ public class TelaDetalhePessoa implements ActionListener {
 		labelTelefone.setBounds(30, 140, 150, 25);
 		valorDdd.setBounds(180, 140, 28, 25);
 		valorTelefone.setBounds(210, 140, 65, 25);
+		labelCep.setBounds(30, 170, 180, 25);
+		valorCep.setBounds(180, 170, 180, 25);
+		labelComp.setBounds(30, 200, 150, 25);
+		valorComp.setBounds(180, 200, 180, 25);
 
 		// Coloca os campos relacionados a endereço de aluno
 		if (op == 1 || op == 3) {
@@ -114,8 +128,8 @@ public class TelaDetalhePessoa implements ActionListener {
 
 		// Coloca botões de excluir e salvar
 		if (op == 3 || op == 4) {
-			botaoSalvar.setBounds(120, 175, 115, 30);
-			botaoExcluir.setBounds(245, 175, 115, 30);
+			botaoSalvar.setBounds(120, 240, 115, 30);
+			botaoExcluir.setBounds(245, 240, 115, 30);
 			this.janela.add(botaoExcluir);
 		}
 
@@ -128,11 +142,15 @@ public class TelaDetalhePessoa implements ActionListener {
 		this.janela.add(labelTelefone);
 		this.janela.add(valorDdd);
 		this.janela.add(valorTelefone);
+		this.janela.add(labelCep);
+		this.janela.add(valorCep);
+		this.janela.add(labelComp);
+		this.janela.add(valorComp);
 		this.janela.add(botaoSalvar);
 
 		this.janela.setLayout(null);
 
-		this.janela.setSize(400, 250);
+		this.janela.setSize(400, 330);
 		this.janela.setVisible(true);
 
 		botaoSalvar.addActionListener(this);
@@ -157,6 +175,8 @@ public class TelaDetalhePessoa implements ActionListener {
 				novoDado[4] = valorID.getText();
 				novoDado[5] = valorDdd.getText();
 				novoDado[6] = valorTelefone.getText();
+				novoDado[7] = valorCep.getText();
+				novoDado[8] = valorComp.getText();
 
 				if (opcao == 1 || opcao == 3) {
 					novoDado[2] = valorEnd.getText();

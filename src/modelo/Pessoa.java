@@ -3,6 +3,7 @@ package modelo;
 public abstract class Pessoa {
 
 	protected String residencia;
+	protected Endereco endereco;
 	protected Telefone numTel;
 	protected String nome;
 	protected String numID;
@@ -15,6 +16,14 @@ public abstract class Pessoa {
 
 	public void setResidencia(String residencia) {
 		this.residencia = residencia;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 
 	public Telefone getNumTel() {

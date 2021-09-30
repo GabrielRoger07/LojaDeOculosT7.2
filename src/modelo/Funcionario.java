@@ -19,6 +19,25 @@ public class Funcionario extends Pessoa {
 
 	}
 
+	public Funcionario(String nome, String salario, String cpf, Endereco end, Telefone tel) {
+		this.nome = nome;
+		this.salario = salario;
+		this.cpf = cpf;
+		this.endereco = end;
+		this.numTel = tel;
+
+	}
+
+	public Funcionario(String nome, String salario, String cpf, String numId, Telefone tel, Endereco end) {
+		this.nome = nome;
+		this.salario = salario;
+		this.cpf = cpf;
+		this.numID = numId;
+		this.numTel = tel;
+		this.endereco = end;
+
+	}
+
 //toString() para printar para o usuário as informações do funcionário
 
 	@Override
