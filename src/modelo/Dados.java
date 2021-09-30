@@ -21,30 +21,6 @@ public class Dados {
 	private Venda[] vendas = new Venda[40];
 	private int qtdVendas = 0;
 
-//	public void preCadastro() {
-//
-//		for (int i = 0; i < 5; i++) {
-//
-//			armacoes[i] = new Armacao("Marca" + i, (i / 2) * 200, (i + 3) + 120, "Formato" + i, "Material" + i,
-//					"Cor" + i, i);
-//			tels[i] = new Telefone((i + 1) * 100, (i + 1) * 1000000);
-//			funcs[i] = new Funcionario("Funcionario" + i, "" + (i + 2) * 12345, "cpf" + (i + 2) * 12647,
-//					"numid" + (i + 2) * 12567, tels[i]);
-//			clientes[i] = new Cliente("Cliente" + i, "end" + i, "cpf" + i * (111111111), "numid" + i, tels[i]);
-//			lentes[i] = new Lente("Marca" + i, i, (i / 2) * 50f, (i / 5), "Especificação" + i, i);
-//			oculos[i] = new OculosDeSol("Marca" + i, (i / 4) * 400, i * 45f, "Formato" + i, "Material" + i, i);
-//			vendas[i] = new Venda("Forma de pagamento" + i, (i + 4) * 785, i * 150f);
-//		}
-//
-//		qtdClientes = 5;
-//		qtdFuncs = 5;
-//		qtdArmacoes = 5;
-//		qtdTels = 5;
-//		qtdLentes = 5;
-//		qtdOculos = 5;
-//		qtdEstoques = 5;
-//		qtdVendas = 5;
-//	}
 	public void preCadastro() {
 
 		tels[0] = new Telefone(61, 85473652);
@@ -52,11 +28,11 @@ public class Dados {
 		tels[2] = new Telefone(61, 83521478);
 		tels[3] = new Telefone(11, 87894519);
 		tels[4] = new Telefone(14, 90817423);
-		enderecos[0] = new Endereco(1213, "aa");
-		enderecos[1] = new Endereco(4785, "bb");
-		enderecos[2] = new Endereco(5896, "cc");
-		enderecos[3] = new Endereco(7484, "dd");
-		enderecos[4] = new Endereco(1545, "ee");
+		enderecos[0] = new Endereco(72145450, "12");
+		enderecos[1] = new Endereco(72163520, "301B");
+		enderecos[2] = new Endereco(52641320, "27A");
+		enderecos[3] = new Endereco(66448840, "09");
+		enderecos[4] = new Endereco(98491270, "1101");
 		clientes[0] = new Cliente("Gabriel", "gabriel@gmail.com", "05214536985", "3147395", tels[0], enderecos[0]);
 		clientes[1] = new Cliente("João", "joao@gmail.com", "03475695123", "2985743", tels[1], enderecos[1]);
 		clientes[2] = new Cliente("Henrique", "henrique@gmail.com", "04685020071", "2589674", tels[2], enderecos[2]);

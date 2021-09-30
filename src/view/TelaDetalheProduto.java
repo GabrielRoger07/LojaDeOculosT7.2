@@ -332,7 +332,7 @@ public class TelaDetalheProduto implements ActionListener {
 
 	public void mensagemErroExclusaoLente() {
 		JOptionPane.showMessageDialog(null, "Ocorreu um erro ao excluir o dado.\n "
-				+ "Verifique se a lente está cadastrad.\n" + "Se sim, cancele\n " + "e tente novamente.", null,
+				+ "Verifique se a lente está cadastrada.\n" + "Se sim, cancele\n " + "e tente novamente.", null,
 				JOptionPane.ERROR_MESSAGE);
 	}
 

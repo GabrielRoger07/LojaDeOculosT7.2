@@ -96,28 +96,28 @@ public class TelaDetalhePessoa implements ActionListener {
 			valorComp = new JTextField(200);
 			valorCargo = new JTextField(200);
 
-			botaoSalvar.setBounds(245, 240, 115, 30);
+			botaoSalvar.setBounds(265, 240, 115, 30);
 		}
 
 		labelNome.setBounds(30, 20, 150, 25);
-		valorNome.setBounds(180, 20, 180, 25);
+		valorNome.setBounds(180, 20, 200, 25);
 		labelEmail.setBounds(30, 50, 150, 25);
-		valorEmail.setBounds(180, 50, 180, 25);
-		labelSalario.setBounds(30, 50, 180, 25);
-		valorSalario.setBounds(180, 50, 180, 25);
+		valorEmail.setBounds(180, 50, 200, 25);
+		labelSalario.setBounds(30, 50, 150, 25);
+		valorSalario.setBounds(180, 50, 200, 25);
 		labelCPF.setBounds(30, 80, 150, 25);
-		valorCPF.setBounds(180, 80, 180, 25);
+		valorCPF.setBounds(180, 80, 200, 25);
 		labelID.setBounds(30, 110, 150, 25);
-		valorID.setBounds(180, 110, 180, 25);
+		valorID.setBounds(180, 110, 200, 25);
 		labelCargo.setBounds(30, 110, 150, 25);
-		valorCargo.setBounds(180, 110, 180, 25);
+		valorCargo.setBounds(180, 110, 200, 25);
 		labelTelefone.setBounds(30, 140, 150, 25);
 		valorDdd.setBounds(180, 140, 28, 25);
 		valorTelefone.setBounds(210, 140, 65, 25);
 		labelCep.setBounds(30, 170, 180, 25);
-		valorCep.setBounds(180, 170, 180, 25);
+		valorCep.setBounds(180, 170, 200, 25);
 		labelComp.setBounds(30, 200, 150, 25);
-		valorComp.setBounds(180, 200, 180, 25);
+		valorComp.setBounds(180, 200, 200, 25);
 
 		// Coloca os campos relacionados a endereço de aluno
 		if (op == 1 || op == 3) {
@@ -138,8 +138,8 @@ public class TelaDetalhePessoa implements ActionListener {
 
 		// Coloca botões de excluir e salvar
 		if (op == 3 || op == 4) {
-			botaoSalvar.setBounds(120, 240, 115, 30);
-			botaoExcluir.setBounds(245, 240, 115, 30);
+			botaoSalvar.setBounds(140, 240, 115, 30);
+			botaoExcluir.setBounds(265, 240, 115, 30);
 			this.janela.add(botaoExcluir);
 		}
 
@@ -158,7 +158,7 @@ public class TelaDetalhePessoa implements ActionListener {
 
 		this.janela.setLayout(null);
 
-		this.janela.setSize(400, 330);
+		this.janela.setSize(450, 330);
 		this.janela.setVisible(true);
 
 		botaoSalvar.addActionListener(this);
@@ -180,7 +180,6 @@ public class TelaDetalhePessoa implements ActionListener {
 
 				novoDado[1] = valorNome.getText();
 				novoDado[3] = valorCPF.getText();
-//				novoDado[4] = valorID.getText();
 				novoDado[5] = valorDdd.getText();
 				novoDado[6] = valorTelefone.getText();
 				novoDado[7] = valorCep.getText();
