@@ -23,6 +23,7 @@ public class TelaMenu implements ActionListener {
 	public static ControleDados dados = new ControleDados();
 
 	public TelaMenu() {
+
 		titulo.setFont(new Font("Arial", Font.BOLD, 20));
 		titulo.setBounds(120, 10, 150, 30);
 		cliente.setBounds(130, 50, 120, 30);

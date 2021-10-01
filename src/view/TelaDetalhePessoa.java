@@ -113,7 +113,7 @@ public class TelaDetalhePessoa implements ActionListener {
 		valorCargo.setBounds(180, 110, 200, 25);
 		labelTelefone.setBounds(30, 140, 150, 25);
 		valorDdd.setBounds(180, 140, 28, 25);
-		valorTelefone.setBounds(210, 140, 65, 25);
+		valorTelefone.setBounds(210, 140, 80, 25);
 		labelCep.setBounds(30, 170, 180, 25);
 		valorCep.setBounds(180, 170, 200, 25);
 		labelComp.setBounds(30, 200, 150, 25);

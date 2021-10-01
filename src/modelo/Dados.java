@@ -23,11 +23,11 @@ public class Dados {
 
 	public void preCadastro() {
 
-		tels[0] = new Telefone(61, 85473652);
-		tels[1] = new Telefone(62, 96587412);
-		tels[2] = new Telefone(61, 83521478);
-		tels[3] = new Telefone(11, 87894519);
-		tels[4] = new Telefone(14, 90817423);
+		tels[0] = new Telefone(61, 985473652);
+		tels[1] = new Telefone(62, 996587412);
+		tels[2] = new Telefone(61, 983521478);
+		tels[3] = new Telefone(11, 987894519);
+		tels[4] = new Telefone(14, 990817423);
 		enderecos[0] = new Endereco(72145450, "12");
 		enderecos[1] = new Endereco(72163520, "301B");
 		enderecos[2] = new Endereco(52641320, "27A");
