@@ -45,6 +45,10 @@ public class ControleArmacao {
 		return arm[i].getPreco();
 	}
 
+	public String getCor(int i) {
+		return arm[i].getCor();
+	}
+
 	public void setQtdArmacoes(int qtdArmacoes) {
 		this.qtdArmacoes = qtdArmacoes;
 	}

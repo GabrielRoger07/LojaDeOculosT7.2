@@ -70,11 +70,11 @@ public class TelaVenda implements ActionListener, ListSelectionListener {
 	public void actionPerformed(ActionEvent e) {
 		Object src = e.getSource();
 
-		// Cadastro de novo cliente
+		// Cadastro de nova venda
 		if (src == cadastroVenda)
 			new TelaDetalheVenda().inserirEditar(1, dados, this, 0);
 
-		// Atualiza a lista de nomes de clientes mostrada no JList
+		// Atualiza a lista de códigos de venda mostrada no JList
 		if (src == atualizaVenda) {
 			listaVendasCadastradas.setListData(new ControleVenda(dados).getCodVenda());
 			listaVendasCadastradas.updateUI();

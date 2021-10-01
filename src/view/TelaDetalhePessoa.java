@@ -119,7 +119,7 @@ public class TelaDetalhePessoa implements ActionListener {
 		labelComp.setBounds(30, 200, 150, 25);
 		valorComp.setBounds(180, 200, 200, 25);
 
-		// Coloca os campos relacionados a endereço de aluno
+		// Coloca os campos relacionados a email e identidade de cliente
 		if (op == 1 || op == 3) {
 			this.janela.add(labelEmail);
 			this.janela.add(valorEmail);
@@ -127,7 +127,7 @@ public class TelaDetalhePessoa implements ActionListener {
 			this.janela.add(valorID);
 		}
 
-		// Coloca campos relacionados a salário de professor
+		// Coloca campos relacionados a salário e cargo de funcionário
 		if (op == 2 || op == 4) {
 
 			this.janela.add(labelSalario);

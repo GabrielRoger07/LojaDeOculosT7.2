@@ -1,6 +1,6 @@
 package controle;
 
-import modelo.OculosDeSol;
+import modelo.*;
 
 public class ControleOculosSol {
 	private OculosDeSol[] oc;
@@ -35,6 +35,14 @@ public class ControleOculosSol {
 
 	public String getMarca(int i) {
 		return oc[i].getMarca();
+	}
+
+	public String getCorArm(int i) {
+		return oc[i].getCorDaArmacao();
+	}
+
+	public String getCorLen(int i) {
+		return oc[i].getCorDaLente();
 	}
 
 	public String getFormato(int i) {

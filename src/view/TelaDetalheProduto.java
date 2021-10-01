@@ -176,7 +176,7 @@ public class TelaDetalheProduto implements ActionListener {
 			this.janela.add(valorEspec);
 		}
 
-		// Coloca botoes de excluir e salvar
+		// Coloca botões de excluir e salvar
 		if (op == 3) {
 			botaoSalvar.setBounds(120, 270, 115, 30);
 			botaoExcluir.setBounds(245, 270, 115, 30);

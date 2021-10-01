@@ -65,7 +65,7 @@ public class ControleDados {
 		return this.d.getQtdVendas();
 	}
 
-	// a posicao 0 do vetor dadosFuncs indica aonde os dados devem ser inseridos
+	// a posição 0 do vetor dadosFuncs indica aonde os dados devem ser inseridos
 	public boolean inserirEditarFuncs(String[] dadosFuncs) {
 
 		if (!dadosFuncs[3].matches("[0-9]+") || !dadosFuncs[5].matches("[0-9]+") || !dadosFuncs[6].matches("[0-9]+")) {
@@ -79,7 +79,7 @@ public class ControleDados {
 		}
 	}
 
-	// a posicao 0 do vetor dadosClientes indica aonde os dados devem ser inseridos
+	// a posição 0 do vetor dadosClientes indica aonde os dados devem ser inseridos
 	public boolean inserirEditarClientes(String[] dadosClientes) {
 		if (!dadosClientes[3].matches("[0-9]+") || !dadosClientes[5].matches("[0-9]+")
 				|| !dadosClientes[6].matches("[0-9]+")) {
@@ -93,7 +93,7 @@ public class ControleDados {
 		}
 	}
 
-	// a posicao 0 do vetor dadosOculos indica aonde os dados devem ser inseridos
+	// a posição 0 do vetor dadosOculos indica aonde os dados devem ser inseridos
 	public boolean inserirEditarOculosSol(String[] dadosOculos) {
 
 		if (!dadosOculos[3].matches("[0-9]+") || !dadosOculos[6].matches("[0-9]+")) {
@@ -107,7 +107,7 @@ public class ControleDados {
 		}
 	}
 
-	// a posicao 0 do vetor dadosLentes indica aonde os dados devem ser inseridos
+	// a posição 0 do vetor dadosLentes indica aonde os dados devem ser inseridos
 	public boolean inserirEditarLentes(String[] dadosLentes) {
 
 		if (!dadosLentes[3].matches("[0-9]+") || !dadosLentes[6].matches("[0-9]+")) {
@@ -120,7 +120,7 @@ public class ControleDados {
 		}
 	}
 
-	// a posicao 0 do vetor dadosArmacoes indica aonde os dados devem ser inseridos
+	// a posição 0 do vetor dadosArmacoes indica aonde os dados devem ser inseridos
 	public boolean inserirEditarArmacoes(String[] dadosArmacoes) {
 
 		if (!dadosArmacoes[3].matches("[0-9]+") || !dadosArmacoes[6].matches("[0-9]+")) {
@@ -135,24 +135,18 @@ public class ControleDados {
 	}
 
 	public boolean inserirEditarVendas(String[] dadosVendas) {
-//		if (!dadosVendas[5].matches("[0-9]+") || !dadosVendas[6].matches("[0-9]+")) {
-//			return false;
-//		} else {
-		Venda ven = new Venda(dadosVendas[1], Integer.parseInt(dadosVendas[2]), Float.parseFloat(dadosVendas[3]));
-		d.inserirEditarVendas(ven, Integer.parseInt(dadosVendas[0]));
-		return true;
-		// }
+		if (!dadosVendas[2].matches("[0-9]+")) {
+			return false;
+		} else {
+			Venda ven = new Venda(dadosVendas[1], Integer.parseInt(dadosVendas[2]), Float.parseFloat(dadosVendas[3]));
+			d.inserirEditarVendas(ven, Integer.parseInt(dadosVendas[0]));
+			return true;
+		}
 	}
 
 	public boolean removerCliente(int i) {
-//		int qtdMat = d.getQtdMatriculados();
+
 		String clienteRemovido = d.getClientes()[i].getNome();
-//		String aux;
-//		for (int j = 0; j < qtdMat; j++) {
-//			aux = d.getMatr()[j].getAluno().getNome();
-//			if (alunoRemovido.compareTo(aux) == 0)
-//				return false; // não é possível remover aluno pois ele está matriculado em um curso
-//		}
 
 		if (i == (d.getQtdClientes() - 1)) { // O cliente a ser removido está no final do array
 			d.setQtdClientes(d.getQtdClientes() - 1);

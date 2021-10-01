@@ -104,18 +104,6 @@ public class TelaDetalheVenda implements ActionListener {
 
 				res = dados.inserirEditarVendas(novoDado);
 
-//				if (opcao == 1 || opcao == 3) {
-//					novoDado[2] = valorEmail.getText();
-//					res = dados.inserirEditarClientes(novoDado);
-//					novoDado[4] = valorID.getText();
-//					res = dados.inserirEditarClientes(novoDado);
-//				} else {
-//					novoDado[2] = valorSalario.getText();
-//					res = dados.inserirEditarFuncs(novoDado);
-//					novoDado[4] = valorCargo.getText();
-//					res = dados.inserirEditarFuncs(novoDado);
-//				}
-
 				if (res) {
 					mensagemSucessoCadastro();
 				} else
