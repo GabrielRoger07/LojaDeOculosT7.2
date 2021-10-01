@@ -13,9 +13,7 @@ import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-import controle.ControleCliente;
-import controle.ControleDados;
-import controle.ControleFuncionario;
+import controle.*;
 
 public class TelaPessoa implements ActionListener, ListSelectionListener {
 	private JFrame janela;

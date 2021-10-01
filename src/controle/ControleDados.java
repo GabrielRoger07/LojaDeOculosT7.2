@@ -57,6 +57,14 @@ public class ControleDados {
 		return this.d.getQtdArmacoes();
 	}
 
+	public Venda[] getVendas() {
+		return this.d.getVendas();
+	}
+
+	public int getQtdVendas() {
+		return this.d.getQtdVendas();
+	}
+
 	// a posicao 0 do vetor dadosFuncs indica aonde os dados devem ser inseridos
 	public boolean inserirEditarFuncs(String[] dadosFuncs) {
 
@@ -123,6 +131,16 @@ public class ControleDados {
 			d.inserirEditarArmacoes(arm, Integer.parseInt(dadosArmacoes[0]));
 			return true;
 		}
+	}
+
+	public boolean inserirEditarVendas(String[] dadosVendas) {
+//		if (!dadosVendas[5].matches("[0-9]+") || !dadosVendas[6].matches("[0-9]+")) {
+//			return false;
+//		} else {
+		Venda ven = new Venda(dadosVendas[1], Integer.parseInt(dadosVendas[2]), Float.parseFloat(dadosVendas[3]));
+		d.inserirEditarVendas(ven, Integer.parseInt(dadosVendas[0]));
+		return true;
+		// }
 	}
 
 	public boolean removerCliente(int i) {
@@ -246,6 +264,30 @@ public class ControleDados {
 			}
 			d.getLentes()[d.getQtdLentes()] = null;
 			d.setQtdLentes(d.getQtdLentes() - 1);
+			return true;
+		}
+	}
+
+	public boolean removerVenda(int i) {
+
+		String convertido = "" + d.getVendas()[i].getCodVenda();
+
+		if (i == (d.getQtdVendas() - 1)) { // A lente a ser removida está no final do array
+			d.setQtdVendas(d.getQtdVendas() - 1);
+			d.getVendas()[d.getQtdVendas()] = null;
+			return true;
+		} else { // A lente a ser removida está no meio do array
+			int cont = 0;
+			String c = "" + d.getVendas()[cont].getCodVenda();
+			while (c.compareTo(convertido) != 0)
+				cont++;
+			// Rotina swap
+			for (int j = cont; j < d.getQtdVendas() - 1; j++) {
+				d.getVendas()[j] = null;
+				d.getVendas()[j] = d.getVendas()[j + 1];
+			}
+			d.getVendas()[d.getQtdVendas()] = null;
+			d.setQtdVendas(d.getQtdVendas() - 1);
 			return true;
 		}
 	}

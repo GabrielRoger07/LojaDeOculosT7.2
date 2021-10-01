@@ -68,8 +68,8 @@ public class TelaMenu implements ActionListener {
 		if (src == funcionario)
 			new TelaPessoa().mostrarDados(dados, 2); // trocar a nova tela que será mostrada
 
-//		if(src == venda)
-//			new TelaPessoa().mostrarDados(dados, 2); //trocar a nova tela que será mostrada
+		if (src == venda)
+			new TelaVenda().mostrarDados(dados, 1); // trocar a nova tela que será mostrada
 
 		if (src == oculosSol)
 			new TelaProduto().mostrarDados(dados, 1); // trocar a nova tela que será mostrada

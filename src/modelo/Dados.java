@@ -58,7 +58,13 @@ public class Dados {
 		oculos[2] = new OculosDeSol("Ray-Ban", 30003, 499.99f, "Quadrado", "Metal", "Vinho", "Cinza", 15);
 		oculos[3] = new OculosDeSol("Ray-Ban", 30004, 499.99f, "Quadrado", "Metal", "Dourado", "Amarelo", 8);
 		oculos[4] = new OculosDeSol("Chilli Beans", 30005, 179.99f, "Quadrado", "Plástico", "Preto", "Preto", 18);
+		vendas[0] = new Venda("Dinheiro", 40001, 15f);
+		vendas[1] = new Venda("PIX", 40002, 30f);
+		vendas[2] = new Venda("Cartão de Crédito", 40003, 60f);
+		vendas[3] = new Venda("Cartão de Débito", 40004, 75f);
+		vendas[4] = new Venda("Cheque", 40005, 90f);
 
+		qtdEnderecos = 5;
 		qtdClientes = 5;
 		qtdFuncs = 5;
 		qtdTels = 5;
@@ -160,6 +166,12 @@ public class Dados {
 		this.armacoes[pos] = arm;
 		if (pos == qtdArmacoes)
 			qtdArmacoes++;
+	}
+
+	public void inserirEditarVendas(Venda venda, int pos) {
+		this.vendas[pos] = venda;
+		if (pos == qtdVendas)
+			qtdVendas++;
 	}
 
 	public Endereco[] getEnderecos() {
