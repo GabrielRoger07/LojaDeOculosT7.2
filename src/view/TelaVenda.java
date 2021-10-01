@@ -88,10 +88,6 @@ public class TelaVenda implements ActionListener, ListSelectionListener {
 		Object src = e.getSource();
 
 		if (e.getValueIsAdjusting() && src == listaVendasCadastradas) {
-			new TelaDetalheVenda().inserirEditar(1, dados, this, listaVendasCadastradas.getSelectedIndex());
-		}
-
-		if (e.getValueIsAdjusting() && src == listaVendasCadastradas) {
 			new TelaDetalheVenda().inserirEditar(2, dados, this, listaVendasCadastradas.getSelectedIndex());
 		}
 	}

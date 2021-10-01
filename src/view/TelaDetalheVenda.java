@@ -41,7 +41,7 @@ public class TelaDetalheVenda implements ActionListener {
 
 		janela = new JFrame(s);
 
-		if (op == 2) { // Preenche dados com dados do funcionário clicado
+		if (op == 2) { // Preenche dados com dados da venda clicada
 
 			valorFormaPag = new JTextField(dados.getVendas()[pos].getFormaPag(), 200);
 			valorCodVenda = new JTextField(String.valueOf(dados.getVendas()[pos].getCodVenda()), 200);
