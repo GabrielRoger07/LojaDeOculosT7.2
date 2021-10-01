@@ -5,7 +5,6 @@ public abstract class Pessoa {
 	protected Endereco endereco;
 	protected Telefone numTel;
 	protected String nome;
-	protected String numID;
 	protected String cpf;
 
 //gets e sets
@@ -32,14 +31,6 @@ public abstract class Pessoa {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public String getNumID() {
-		return numID;
-	}
-
-	public void setNumID(String numID) {
-		this.numID = numID;
 	}
 
 	public String getCpf() {

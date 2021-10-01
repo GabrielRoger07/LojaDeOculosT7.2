@@ -16,8 +16,6 @@ public class Dados {
 	private int qtdLentes = 0;
 	private OculosDeSol[] oculos = new OculosDeSol[40];
 	private int qtdOculos = 0;
-	private Estoque[] estoques = new Estoque[40];
-	private int qtdEstoques = 0;
 	private Venda[] vendas = new Venda[40];
 	private int qtdVendas = 0;
 
@@ -220,22 +218,6 @@ public class Dados {
 
 	public void setQtdOculos(int qtdOculos) {
 		this.qtdOculos = qtdOculos;
-	}
-
-	public Estoque[] getEstoques() {
-		return estoques;
-	}
-
-	public void setEstoques(Estoque[] estoques) {
-		this.estoques = estoques;
-	}
-
-	public int getQtdEstoques() {
-		return qtdEstoques;
-	}
-
-	public void setQtdEstoques(int qtdEstoques) {
-		this.qtdEstoques = qtdEstoques;
 	}
 
 	public Venda[] getVendas() {

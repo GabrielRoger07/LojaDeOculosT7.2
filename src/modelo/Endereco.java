@@ -5,6 +5,7 @@ public class Endereco {
 	private int cep;
 	private String complemento;
 
+	// Método Construtor
 	public Endereco(int c, String comp) {
 		this.cep = c;
 		this.complemento = comp;

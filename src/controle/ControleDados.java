@@ -68,7 +68,7 @@ public class ControleDados {
 	// a posicao 0 do vetor dadosFuncs indica aonde os dados devem ser inseridos
 	public boolean inserirEditarFuncs(String[] dadosFuncs) {
 
-		if (!dadosFuncs[5].matches("[0-9]+") || !dadosFuncs[6].matches("[0-9]+")) {
+		if (!dadosFuncs[3].matches("[0-9]+") || !dadosFuncs[5].matches("[0-9]+") || !dadosFuncs[6].matches("[0-9]+")) {
 			return false;
 		} else {
 			Funcionario func = new Funcionario(dadosFuncs[1], dadosFuncs[2], dadosFuncs[3], dadosFuncs[4],
@@ -81,7 +81,8 @@ public class ControleDados {
 
 	// a posicao 0 do vetor dadosClientes indica aonde os dados devem ser inseridos
 	public boolean inserirEditarClientes(String[] dadosClientes) {
-		if (!dadosClientes[5].matches("[0-9]+") || !dadosClientes[6].matches("[0-9]+")) {
+		if (!dadosClientes[3].matches("[0-9]+") || !dadosClientes[5].matches("[0-9]+")
+				|| !dadosClientes[6].matches("[0-9]+")) {
 			return false;
 		} else {
 			Cliente cli = new Cliente(dadosClientes[1], dadosClientes[2], dadosClientes[3], dadosClientes[4],
@@ -95,7 +96,7 @@ public class ControleDados {
 	// a posicao 0 do vetor dadosOculos indica aonde os dados devem ser inseridos
 	public boolean inserirEditarOculosSol(String[] dadosOculos) {
 
-		if (!dadosOculos[3].matches("[0-9]+") || !dadosOculos[4].matches("[0-9]+")) {
+		if (!dadosOculos[3].matches("[0-9]+") || !dadosOculos[6].matches("[0-9]+")) {
 			return false;
 		} else {
 			OculosDeSol oc = new OculosDeSol(dadosOculos[1], Integer.parseInt(dadosOculos[3]),
@@ -109,11 +110,11 @@ public class ControleDados {
 	// a posicao 0 do vetor dadosLentes indica aonde os dados devem ser inseridos
 	public boolean inserirEditarLentes(String[] dadosLentes) {
 
-		if (!dadosLentes[3].matches("[0-9]+") || !dadosLentes[4].matches("[0-9]+")) {
+		if (!dadosLentes[3].matches("[0-9]+") || !dadosLentes[6].matches("[0-9]+")) {
 			return false;
 		} else {
 			Lente len = new Lente(dadosLentes[1], Integer.parseInt(dadosLentes[3]), Float.parseFloat(dadosLentes[4]),
-					Integer.parseInt(dadosLentes[2]), dadosLentes[5], Integer.parseInt(dadosLentes[6]));
+					Float.parseFloat(dadosLentes[2]), dadosLentes[5], Integer.parseInt(dadosLentes[6]));
 			d.inserirEditarLentes(len, Integer.parseInt(dadosLentes[0]));
 			return true;
 		}
@@ -122,7 +123,7 @@ public class ControleDados {
 	// a posicao 0 do vetor dadosArmacoes indica aonde os dados devem ser inseridos
 	public boolean inserirEditarArmacoes(String[] dadosArmacoes) {
 
-		if (!dadosArmacoes[3].matches("[0-9]+") || !dadosArmacoes[4].matches("[0-9]+")) {
+		if (!dadosArmacoes[3].matches("[0-9]+") || !dadosArmacoes[6].matches("[0-9]+")) {
 			return false;
 		} else {
 			Armacao arm = new Armacao(dadosArmacoes[1], Integer.parseInt(dadosArmacoes[3]),

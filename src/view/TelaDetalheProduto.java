@@ -320,7 +320,7 @@ public class TelaDetalheProduto implements ActionListener {
 		JOptionPane.showMessageDialog(null,
 				"ERRO AO SALVAR OS DADOS!\n " + "Pode ter ocorrido um dos dois erros a seguir:  \n"
 						+ "1. Nem todos os campos foram preenchidos \n"
-						+ "2. CPF, identidade, DDD e telefone não contém apenas números",
+						+ "2. Código, preço, quantidade ou grau não contém apenas números",
 				null, JOptionPane.ERROR_MESSAGE);
 	}
 

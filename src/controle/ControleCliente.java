@@ -1,7 +1,6 @@
 package controle;
 
-import modelo.Cliente;
-import modelo.Telefone;
+import modelo.*;
 
 public class ControleCliente {
 	private Cliente[] cli;
@@ -46,6 +45,10 @@ public class ControleCliente {
 
 	public Telefone getTelefone(int i) {
 		return cli[i].getNumTel();
+	}
+
+	public Endereco getEndereco(int i) {
+		return cli[i].getEndereco();
 	}
 
 	public void setQtdClientes(int qtdClientes) {

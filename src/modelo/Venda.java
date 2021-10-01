@@ -6,9 +6,8 @@ public class Venda {
 	private int codVenda;
 	private float valorFinal;
 	private int qtdVendas;
-	Venda[] vendas = new Venda[40];
 
-	// Caso de sobrecarga do método construtor Venda
+	// Método Construtor
 	public Venda(String form, int cod, float valor) {
 
 		this.formaPag = form;

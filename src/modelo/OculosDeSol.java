@@ -6,9 +6,7 @@ public class OculosDeSol extends Produto {
 	private String material;
 	private String corDaLente;
 	private String corDaArmacao;
-	private boolean polarizada;
-	private int quantOculosSol = 0;
-	OculosDeSol[] oculosSol = new OculosDeSol[40];
+	private int quantOculosSol;
 
 //Método Construtor
 
@@ -18,8 +16,6 @@ public class OculosDeSol extends Produto {
 		this.codigoProd = cod;
 		this.formato = form;
 		this.material = material;
-//		this.corDaLente = corL;
-//		this.corDaArmacao = corA;
 		this.quantOculosSol = qtd;
 	}
 
@@ -41,7 +37,7 @@ public class OculosDeSol extends Produto {
 	public String toString() {
 		return "Óculos de Sol { Marca: " + marca + ", preco: " + preco + ", codigo do produto: " + codigoProd
 				+ ", formato: " + formato + ", material=" + material + ", cor da lente: " + corDaLente
-				+ ", cor da armação: " + corDaArmacao + ", lente polarizada: " + polarizada + "}";
+				+ ", cor da armação: " + corDaArmacao + "}";
 	}
 
 //gets e sets
@@ -76,14 +72,6 @@ public class OculosDeSol extends Produto {
 
 	public void setCorDaArmacao(String corDaArmacao) {
 		this.corDaArmacao = corDaArmacao;
-	}
-
-	public boolean getPolarizada() {
-		return polarizada;
-	}
-
-	public void setPolarizada(boolean polarizada) {
-		this.polarizada = polarizada;
 	}
 
 	public int getQuantOculosSol() {

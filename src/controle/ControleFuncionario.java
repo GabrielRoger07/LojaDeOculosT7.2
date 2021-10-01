@@ -1,7 +1,6 @@
 package controle;
 
-import modelo.Funcionario;
-import modelo.Telefone;
+import modelo.*;
 
 public class ControleFuncionario {
 	private Funcionario[] func;
@@ -38,17 +37,16 @@ public class ControleFuncionario {
 		return numCpf;
 	}
 
-	public String getNumID(int i) {
-		String numID = String.valueOf(func[i].getNumID());
-		return numID;
-	}
-
 	public String getCargo(int i) {
 		return func[i].getCargo();
 	}
 
 	public Telefone getNumTel(int i) {
 		return func[i].getNumTel();
+	}
+
+	public Endereco getEndereco(int i) {
+		return func[i].getEndereco();
 	}
 
 	public void setQtdFuncs(int qtdFuncs) {

@@ -6,19 +6,8 @@ public class Armacao extends Produto {
 	private String material;
 	private String cor;
 	private int quantArmacao;
-	Armacao[] arm = new Armacao[40];
 
 //Método Construtor
-
-//	public Armacao(String marca, float preco, int cod, String form, String material, String cor, int qtd) {
-//		this.marca = null;
-//		this.preco = 0f;
-//		this.codigoProd = 0;
-//		this.formato = null;
-//		this.material = null;
-//		this.cor = null;
-//		this.quantArmacao = qtd;
-//	}
 
 	public Armacao(String marca, int cod, float preco, String form, String material, int qtd) {
 		this.marca = marca;

@@ -4,9 +4,8 @@ public class Lente extends Produto {
 	private String especificacao;
 	private float grau;
 	private int quantLente;
-	Lente[] lentes = new Lente[40];
 
-//Método construtor
+//Método Construtor
 
 	public Lente(String marca, int cod, float preco, float grau, String especif, int qtd) {
 		this.marca = marca;

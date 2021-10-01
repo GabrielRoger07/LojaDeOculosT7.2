@@ -3,19 +3,10 @@ package modelo;
 public class Cliente extends Pessoa {
 
 	private String email;
+	private String numID;
 
 //Caso de sobrecarga do método construtor Cliente
 
-	public Cliente(String nome, String end, String registro, String id, Telefone tel) {
-		this.nome = nome;
-		this.numID = id;
-		this.cpf = registro;
-		this.numTel = tel;
-//		this.residencia = end;
-
-	}
-
-	// adddffa//
 	public Cliente(String nome, String email, String registro, String id, Telefone tel, Endereco ende) {
 		this.nome = nome;
 		this.numID = id;
@@ -24,14 +15,6 @@ public class Cliente extends Pessoa {
 		this.email = email;
 		this.endereco = ende;
 
-	}
-
-	public Cliente(String nome, String registro, Telefone tel, String email, String end) {
-		this.nome = nome;
-		this.cpf = registro;
-		this.numTel = tel;
-		this.email = email;
-//		this.residencia = end;
 	}
 
 	public Cliente(String nome, String registro, Telefone tel, String email, Endereco end) {
@@ -57,6 +40,14 @@ public class Cliente extends Pessoa {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getNumID() {
+		return numID;
+	}
+
+	public void setNumID(String numID) {
+		this.numID = numID;
 	}
 
 }

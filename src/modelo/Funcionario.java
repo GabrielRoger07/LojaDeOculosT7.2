@@ -2,17 +2,15 @@ package modelo;
 
 public class Funcionario extends Pessoa {
 
-	private String matricula;
 	private String salario;
 	private String cargo;
 
 //Método Construtor 
 
-	public Funcionario(String nome, String salario, String cpf, String numId, Telefone tel) {
+	public Funcionario(String nome, String salario, String cpf, Telefone tel) {
 		this.nome = nome;
 		this.salario = salario;
 		this.cpf = cpf;
-		this.numID = numId;
 		this.numTel = tel;
 
 	}
@@ -40,35 +38,10 @@ public class Funcionario extends Pessoa {
 
 	@Override
 	public String toString() {
-		return "Dados do funcionário:Nome: " + this.nome + ", Matrícula: " + matricula + ", Cargo: " + cargo
-				+ ", Telefone: " + numTel;
+		return "Dados do funcionário:Nome: " + this.nome + ", Cargo: " + cargo + ", Telefone: " + numTel;
 	}
 
 //gets e sets
-
-//	public Date getDataNasc() {
-//		return dataNasc;
-//	}
-//
-//	public void setDataNasc(Date dataNasc) {
-//		this.dataNasc = dataNasc;
-//	}
-
-	public String getMatricula() {
-		return matricula;
-	}
-
-	public void setMatricula(String matricula) {
-		this.matricula = matricula;
-	}
-
-//	public Date getDataIngresso() {
-//		return dataIngresso;
-//	}
-//
-//	public void setDataIngresso(Date dataIngresso) {
-//		this.dataIngresso = dataIngresso;
-//	}
 
 	public String getSalario() {
 		return salario;
